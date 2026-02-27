@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ section.title }}</h1>
+{{ section.content | safe }}
+
+{% if section.subsections | length > 0 %}
+<h2>Modules</h2>
+<div class="mod-grid">
+    {% for subsection in section.subsections %}
+        {% set s = get_section(path=subsection) %}
+        <div class="mod-card">
+            <a href="{{ s.permalink }}">
+                <h3>{{ s.title }}</h3>
+            </a>
+            <p>{{ s.description }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% if section.pages | length > 0 %}
+<h2>Modules</h2>
+<div class="mod-grid">
+    {% for page in section.pages %}
+        <div class="mod-card">
+            <a href="{{ page.permalink }}">
+                <h3>{{ page.title }}</h3>
+            </a>
+            <p>{{ page.description }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% endblock content %}
