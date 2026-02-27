@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://biazonx.github.io/mods_site/"
+base_url = "https://biazonx.github.io/mods_site"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
