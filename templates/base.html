@@ -4,15 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>
-        {% if page.title %}
-            {{ page.title }} | Biazon Mods
-        {% elif section.title %}
-            {{ section.title }} | Biazon Mods
-        {% else %}
-            Biazon Mods
-        {% endif %}
-    </title>
+	<title>Biazon Mods - {% block title %}{% endblock title %}</title>
 
     <!-- Medieval Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
@@ -22,21 +14,13 @@
 </head>
 
 <body>
-
-<header>
-	<nav>
-		<a href="/">Home</a>
-		<a href="/ck3/">Crusader Kings III Mods</a>
-	</nav>
-</header>
+    {% include 'partials/header.html' %}
 
 <main>
     {% block content %}{% endblock content %}
 </main>
 
-<footer>
-    <p>© {{ now() | date(format="%Y") }} Biazon Mods</p>
-</footer>
+    {% include 'partials/footer.html' %}
 
 <!-- LIGHTBOX (Zoom Overlay) -->
 <div id="lightbox" onclick="closeLightbox()">
