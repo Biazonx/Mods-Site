@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-Allow: /
-Sitemap: https://biazonx.github.io/mods_site/sitemap.xml
