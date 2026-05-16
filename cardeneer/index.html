@@ -1,30 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<title>Biazon Mods - Mods</title>
+        <title>Biazon Mods - Mods</title>
 
-    <!-- Medieval Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-	
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="https://biazonx.github.io/Mods-Site/css/main.css?h=a2a39ffefc2b24259f28">
-	<link rel="icon" href="https://biazonx.github.io/Mods-Site/icons/site_logo.png?h=a701fdf1a703bda6c3e2" type="image/png">
-</head>
+        <!-- Medieval Font -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
 
-<body>
-    <header>
-	<nav>
-		<a href="https://biazonx.github.io/Mods-Site/">Home</a>
-		<a href="https://biazonx.github.io/Mods-Site/ck3/">Crusader Kings III </a>
-		<a href="https://biazonx.github.io/Mods-Site/cardeneer/">Cardeneer </a>
-	</nav>
+        <!-- Main Stylesheet -->
+        <link
+            rel="stylesheet"
+            href="https://biazonx.github.io/Mods-Site/css/main.css?h=63f9488e38313a590b1b"
+        />
+        <link
+            rel="icon"
+            href="https://biazonx.github.io/Mods-Site/icons/site_logo.png?h=a701fdf1a703bda6c3e2"
+            type="image/png"
+        />
+    </head>
+
+    <body>
+        <div class="bg-art"></div>
+
+        <header>
+    <nav>
+        <a href="https://biazonx.github.io/Mods-Site/">Home</a>
+        <a href="https://biazonx.github.io/Mods-Site/ck3/">Crusader Kings III </a>
+        <a href="https://biazonx.github.io/Mods-Site/cardeneer/">Cardeneer </a>
+        <a href="https://biazonx.github.io/Mods-Site/Gardendless/">
+            PvZ Gardendless
+        </a>
+    </nav>
 </header>
 
-<main>
-    
+
+        <main>
 <h1>Cardeneer Mods</h1>
 <p>Explore my Cardeneer projects.</p>
 
@@ -46,40 +61,38 @@
 
 
 
-
 </main>
 
-    <footer>
+        <footer>
     <p>© 2026 Biazon Mods</p>
 </footer>
 
-<!-- LIGHTBOX (Zoom Overlay) -->
-<div id="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img">
-</div>
+        <!-- LIGHTBOX (Zoom Overlay) -->
+        <div id="lightbox" onclick="closeLightbox()">
+            <img id="lightbox-img" />
+        </div>
 
-<!-- LIGHTBOX SCRIPT -->
-<script>
-function openLightbox(img) {
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
+        <!-- LIGHTBOX SCRIPT -->
+        <script>
+            function openLightbox(img) {
+                const lightbox = document.getElementById("lightbox");
+                const lightboxImg = document.getElementById("lightbox-img");
 
-    lightbox.style.display = "block";
-    lightboxImg.src = img.src;
-    document.body.style.overflow = "hidden";
-}
+                lightbox.style.display = "block";
+                lightboxImg.src = img.src;
+                document.body.style.overflow = "hidden";
+            }
 
-function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-    document.body.style.overflow = "auto";
-}
+            function closeLightbox() {
+                document.getElementById("lightbox").style.display = "none";
+                document.body.style.overflow = "auto";
+            }
 
-document.addEventListener("keydown", function(event) {
-    if (event.key === "Escape") {
-        closeLightbox();
-    }
-});
-</script>
-
-</body>
+            document.addEventListener("keydown", function (event) {
+                if (event.key === "Escape") {
+                    closeLightbox();
+                }
+            });
+        </script>
+    </body>
 </html>
