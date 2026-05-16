@@ -13,20 +13,25 @@
         />
 
         <style>
+            :root {
+                --cursor-default:
+                    url('{{ get_url(path="cursors/neon_normal.cur") }}');
+                --cursor-action:
+                    url('{{ get_url(path="cursors/neon_cursor_link_select.cur") }}');
+                --bg-art-image: url('{{ get_url(path="images/your-art.gif") }}');
+            }
+
             body {
-                cursor:
-                    url('{{ get_url(path="cursors/neon_normal.cur") }}'), auto;
+                cursor: var(--cursor-default), auto;
             }
             a,
             button,
             .button,
             .big-button {
-                cursor:
-                    url('{{ get_url(path="cursors/neon_cursor_link_select.cur") }}'),
-                    auto;
+                cursor: var(--cursor-action), auto;
             }
             .bg-art {
-                background-image: url('{{ get_url(path="images/your-art.gif") }}');
+                background-image: var(--bg-art-image);
             }
         </style>
 
