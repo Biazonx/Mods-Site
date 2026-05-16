@@ -14,22 +14,9 @@
 
         <style>
             :root {
-                --cursor-default:
-                    url('{{ get_url(path="cursors/neon_normal.cur") }}');
-                --cursor-action:
-                    url('{{ get_url(path="cursors/neon_cursor_link_select.cur") }}');
                 --bg-art-image: url('{{ get_url(path="images/your-art.gif") }}');
             }
-
-            body {
-                cursor: var(--cursor-default), auto;
-            }
-            a,
-            button,
-            .button,
-            .big-button {
-                cursor: var(--cursor-action), auto;
-            }
+            
             .bg-art {
                 background-image: var(--bg-art-image);
             }
