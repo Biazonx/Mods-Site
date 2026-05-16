@@ -1,55 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<title>Biazon Mods - {% block title %}{% endblock title %}</title>
+        <title>Biazon Mods - {% block title %}{% endblock title %}</title>
 
-    <!-- Medieval Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-	
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="{{ get_url(path='css/main.css', cachebust=true) }}">
-	<link rel="icon" href="{{ get_url(path='icons/site_logo.png', cachebust=true) }}" type="image/png">
-</head>
+        <!-- Medieval Font -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
 
-<body>
-    {% include 'partials/header.html' %}
+        <!-- Main Stylesheet -->
+        <link
+            rel="stylesheet"
+            href="{{ get_url(path='css/main.css', cachebust=true) }}"
+        />
+        <link
+            rel="icon"
+            href="{{ get_url(path='icons/site_logo.png', cachebust=true) }}"
+            type="image/png"
+        />
+    </head>
 
-<main>
-    {% block content %}{% endblock content %}
-</main>
+    <body>
+        <div class="bg-art"></div>
 
-    {% include 'partials/footer.html' %}
+        {% include 'partials/header.html' %}
 
-<!-- LIGHTBOX (Zoom Overlay) -->
-<div id="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img">
-</div>
+        <main>{% block content %}{% endblock content %}</main>
 
-<!-- LIGHTBOX SCRIPT -->
-<script>
-function openLightbox(img) {
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
+        {% include 'partials/footer.html' %}
 
-    lightbox.style.display = "block";
-    lightboxImg.src = img.src;
-    document.body.style.overflow = "hidden";
-}
+        <!-- LIGHTBOX (Zoom Overlay) -->
+        <div id="lightbox" onclick="closeLightbox()">
+            <img id="lightbox-img" />
+        </div>
 
-function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-    document.body.style.overflow = "auto";
-}
+        <!-- LIGHTBOX SCRIPT -->
+        <script>
+            function openLightbox(img) {
+                const lightbox = document.getElementById("lightbox");
+                const lightboxImg = document.getElementById("lightbox-img");
 
-document.addEventListener("keydown", function(event) {
-    if (event.key === "Escape") {
-        closeLightbox();
-    }
-});
-</script>
+                lightbox.style.display = "block";
+                lightboxImg.src = img.src;
+                document.body.style.overflow = "hidden";
+            }
 
-</body>
+            function closeLightbox() {
+                document.getElementById("lightbox").style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+
+            document.addEventListener("keydown", function (event) {
+                if (event.key === "Escape") {
+                    closeLightbox();
+                }
+            });
+        </script>
+    </body>
 </html>
