@@ -12,6 +12,24 @@
             rel="stylesheet"
         />
 
+        <style>
+            body {
+                cursor:
+                    url('{{ get_url(path="cursors/neon_normal.cur") }}'), auto;
+            }
+            a,
+            button,
+            .button,
+            .big-button {
+                cursor:
+                    url('{{ get_url(path="cursors/neon_cursor_link_select.cur") }}'),
+                    auto;
+            }
+            .bg-art {
+                background-image: url('{{ get_url(path="images/your-art.gif") }}');
+            }
+        </style>
+
         <!-- Main Stylesheet -->
         <link
             rel="stylesheet"
